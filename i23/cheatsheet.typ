@@ -62,16 +62,24 @@ autrement dit, vrai sauf si p est vrai et q est faux
 
   ),$<=>$) vrai si les deux variables ont la meme valeur
 
-Voir fichiers python pour les informations concernant les TPs
+== Proprietes
+- comutativite de $and$ et $or$
+$ (p and q) eq.triple (q and p) $
+$ (p or q) eq.triple (q or p) $
+- associativite de $and$ et $or$
+$ ((P and Q) and R) eq.triple ((q and R) and P)$
+$((P or Q) or R) eq.triple ((Q or R) or P) $
+- idempotence de $and$ et $or$
+$ (p and p) eq.triple p$ \
+$ (p or p) eq.triple p$
+
 = Predicats
 #definition(title:"Predicat")[enonce contenant des variables tel qu'en substituant chaque variables par une valeure choisi, on obtient une proposition]
 exemple: $x|P(x)$ (se lit x tel que P(x)) est un predicat dans lesquelles la proposition P(x) est vraie pour x
 
 = Quantificateurs
-#lorem(50)
 
 = Axiomes
-#lorem(60)
 
 // #lorem(500)
 ]
@@ -83,3 +91,23 @@ exemple: $x|P(x)$ (se lit x tel que P(x)) est un predicat dans lesquelles la pro
 *  loi de De Morgan
 *  commutation
 */
+= TPs
+
+== Question 1: Ecrire une fonction #py("interpretations(nbVar)") qui renvoie le tuple constitue de toutes les interpretations possible de nbvar variables propositionnelles
+
+ici la strategie est d'imiter ce tableau en python
+#table(columns: (auto, auto, auto, auto),
+       "", "v", "f","v",
+       "f","f", "f", "v", 
+       "v","v", "v", "v",
+       "f", "v", "f", "v"
+      )
+#strike[qui, rempli, donne toutes les possibilites des variables]
+
+#py("
+  
+def interpretations(nbvar):
+pass  
+
+
+")

@@ -3,8 +3,13 @@
 # Q1: ecrire une fonction Inter(nbvar) qui renvoie le tuple constitue de toutes les interpretations possible de nbvar variables propositionnelles
 def inter(nbvar):
     result = ()
-    for i in range(nbvar**2):
-        output = ()
+    vrai = [True for i in range(nbvar)]
+    faux = [False for i in range (nbvar)]
+    cptvrai, cptfaux = 0
+    for i in vrai:
+        for y in faux:
+            result+=()
+            ytou
         
 
 

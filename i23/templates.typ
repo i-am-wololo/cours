@@ -43,7 +43,7 @@
 
 #let chshtemplate(matiere: "", body) = {
   set text(font: "Hack Nerd Font")
-  title("fiche de "+matiere+" de Mehdi Ben Ahemed")
+  title("fiche de "+matiere+" de Mehdi Ben Ahmed")
   columns(2, body)
 }
 
@@ -53,4 +53,6 @@
   table(columns:(auto, auto, auto), ..body)
 }
 
-test
+#let py(body) = {
+  raw(lang:"py", body)
+}
