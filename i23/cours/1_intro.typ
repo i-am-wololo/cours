@@ -1,5 +1,0 @@
-#import "../templates.typ": *
-
-
-= Introduction
-

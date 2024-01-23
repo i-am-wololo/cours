@@ -1,15 +1,10 @@
-#import "./templates.typ": *
+#import "../templates.typ": *
 
-#show: chshtemplate.with(matiere: "i23")
-
-// = Connecteurs logique:
-// #table(
-//   coluk
 = Definitions et props
 #definition(title:"Commutatif")[les variables peuvent etre inverses]
 #definition(title:"L'arbre de Derivation")[C'est un format de pour representer une proposition]
 #figure(
-  image("./ArbreDerivation.png", width:60%),
+  image("../ArbreDerivation.png", width:60%),
   caption: text(size:8pt, $(P => Q) and (P or not R) $)
 ) 
 #definition(title:"Loi de De Morgan")[Soit $P$ et $Q$ deux assertions, alors  \
@@ -73,24 +68,6 @@ $((P or Q) or R) eq.triple ((Q or R) or P) $
 $ (p and p) eq.triple p$ \
 $ (p or p) eq.triple p$
 
-= Predicats
-#definition(title:"Predicat")[enonce contenant des variables tel qu'en substituant chaque variables par une valeure choisi, on obtient une proposition]
-exemple: $x|P(x)$ (se lit x tel que P(x)) est un predicat dans lesquelles la proposition P(x) est vraie pour x
-
-= Quantificateurs
-
-= Axiomes
-
-// #lorem(500)
-]
-// = Arbresss de derivation
-
-/*
-*  (regles de proposition)
-*  arbre de derivation
-*  loi de De Morgan
-*  commutation
-*/
 = TPs
 
 == Question 1: Ecrire une fonction #py("interpretations(nbVar)") qui renvoie le tuple constitue de toutes les interpretations possible de nbvar variables propositionnelles
@@ -107,7 +84,15 @@ ici la strategie est d'imiter ce tableau en python
 #py("
   
 def interpretations(nbvar):
-pass  
+    vrai = [vrai for i in range(nbvar)]
+    faux = [faux for i in range(nbvar)]
 
 
 ")
+
+== Question 2.
+Une formule propositionelle FP de n variables esst codee par une chiande de caracteres respectant la syntaxe python. 
+les variables étant toujours codées V[0], V[1],… ,V[n-1]. Écrivez une fonction TV(FP,n) qui renvoie la table de vérité de la formule FP sous forme de tuple de tuples à l'aide de la fonction Inter et la fonction d'évaluation eval(chaine) du Python qui évalue une chaine de caractères si elle respecte la syntaxe du langage Python.
+
+Exemple. Avec la chaîne de caractère FP = "V[0] and V[1]", l'appel de la fonction TV(FP,2) doit renvoyer le tuple
+#py("((False,False,False),(False,True,False),(True,False,False),(True,True,True))")

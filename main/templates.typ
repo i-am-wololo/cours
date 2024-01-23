@@ -42,7 +42,9 @@
 ]
 
 #let chshtemplate(matiere: "", body) = {
-  set text(font: "Hack Nerd Font")
+  set text(font: "Hack Nerd Font",
+           size: 8pt
+          )
   title("fiche de "+matiere+" de Mehdi Ben Ahmed")
   columns(2, body)
 }
