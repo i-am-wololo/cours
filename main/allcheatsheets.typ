@@ -6,11 +6,4 @@
 #include "./cheatsheeti22.typ"
 #pagebreak()
 #include "./cheatsheeti21.typ"
-#pagebreak()
-#align(center,
-[Brouillon]
-)
-#pagebreak()
-#align(center,
-[Brouillon]
-)
+

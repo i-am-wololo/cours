@@ -72,26 +72,34 @@ $ (p or p) eq.triple p$
 
 == Question 1: Ecrire une fonction #py("interpretations(nbVar)") qui renvoie le tuple constitue de toutes les interpretations possible de nbvar variables propositionnelles
 
-ici la strategie est d'imiter ce tableau en python
-#table(columns: (auto, auto, auto, auto),
-       "", "v", "f","v",
-       "f","f", "f", "v", 
-       "v","v", "v", "v",
-       "f", "v", "f", "v"
-      )
-#strike[qui, rempli, donne toutes les possibilites des variables]
-
+la technique que j'ai opte est de calculer tous les nombre possible en binaire jusqu'a $2^"nbvar"$, puis de les retranscrire en tuple de vrai/faux. Voici le code (on assume une fonction translate to tuple defini comme le suit)
 #py("
-  
-def interpretations(nbvar):
-    vrai = [vrai for i in range(nbvar)]
-    faux = [faux for i in range(nbvar)]
+# Q1: ecrire une fonction Inter(nbvar) qui renvoie le tuple constitue de toutes les interpretations possible de nbvar variables propositionnelles
+def translatetotuple(binary: str):
+    result = []
+    for i in binary:
+        if i == '1':
+            result.append(True)
+        else:
+            result.append(False)
 
+    return tuple(result)
 
-")
+def inter(nbvar):
+    finalresult = ()
+    for i in range(nbvar**2):
+        result = bin(i)
+        result = result[2:]
+        while len(result)<nbvar:
+            result = '0'+result 
+        result = translatetotuple(result)
+        finalresult += result,
+    return finalresult
+"
+)
 
 == Question 2.
-Une formule propositionelle FP de n variables esst codee par une chiande de caracteres respectant la syntaxe python. 
+Une formule propositionelle FP de n variables est codee par une chiande de caracteres respectant la syntaxe python. 
 les variables étant toujours codées V[0], V[1],… ,V[n-1]. Écrivez une fonction TV(FP,n) qui renvoie la table de vérité de la formule FP sous forme de tuple de tuples à l'aide de la fonction Inter et la fonction d'évaluation eval(chaine) du Python qui évalue une chaine de caractères si elle respecte la syntaxe du langage Python.
 
 Exemple. Avec la chaîne de caractère FP = "V[0] and V[1]", l'appel de la fonction TV(FP,2) doit renvoyer le tuple
