@@ -32,9 +32,27 @@ la notation est qui suit:
 - $O(n)$: pire cas
 - $Theta(n)$: cas moyen
 
+#definition(title:$f(n)=O(g(n))$)[il existe une constance $c$ et un entier $n_0$ tels que $forall n >= n_0, f(n) =< c g(n)$]
+exemples:
+- $3n^2 - n + 6 = O(n^2)$ en prenant $c = 3$ et $n_0 = 6$
+- $3n^2 - n + 6 = O(n^3)$ en prenant $c = 1$ et $n_0=4$
+- $3n^2 - n + 6 != O(n)$ car $forall c, c n < 3n^2 - n+6$ quand $n > c +1$
+
+#definition(title:$f(n)=Omega(g(n))$)[il existe une constance $c$ et un entier $n_0$ tels que $forall n >= n_0, f(n) => c g(n)$]
+exemples:
+- $3n^2 - n + 6 = Omega(n^2)$ en prenant $c = 2$ et $n_0 = 2$
+- $3n^2 - n + 6 != Omega(n^3) forall c, 3n^2 -n+6 < c n^3$ quand $c n>3$ et $n>6$
+- $3n^2 - n + 6 = Omega(n)$ en prenant $c = 1$ et $n_0 = 1$
+
+#definition(title:$f(n)=Theta(g(n))$)[il existe une constance $c$ et un entier $n_0$ tels que $forall n >= n_0 c_1 g(n) <= f(n)<= c_2 g(n)$ \ ($f(n)- O((g(n)$ et $f(n) = Omega(g((n)))$)]
+- $3n^2 - n + 6 = Theta(n^2)$ 
+- $3n^2 - n + 6 = Theta(n^3)$
+- $3n^2 - n + 6 = Theta(n)$
+
+
+
 
 = Bases d'algo
-
 
 = Algos de tri
 

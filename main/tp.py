@@ -17,16 +17,21 @@ def inter(nbvar):
         result = bin(i)
         result = result[2:]
         while len(result)<nbvar:
-            # print(result)
             result = "0"+result 
         result = translatetotuple(result)
         finalresult += result,
-        # print(reslt)
     return finalresult
-    
-        
 
-print(inter(4))
+# Q2
+def TV(fp, nbvar):
+   variables = inter(nbvar)
+   endresult = ()
+   for V in variables:
+       endresult += (V, (exec(str(V)+"="+fp)),)
+   return endresult
+
+TV("V[0] and V[1]", 2) 
+assert TV("V[0] and V[1]", 2) == ((False,False,False),(False,True,False),(True,False,False),(True,True,True))
 assert inter(2) == ((False,False),(False,True),(True,False),(True,True))
 
 # assert inter(4) == (

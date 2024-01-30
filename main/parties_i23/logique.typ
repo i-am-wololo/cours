@@ -68,6 +68,19 @@ $((P or Q) or R) eq.triple ((Q or R) or P) $
 $ (p and p) eq.triple p$ \
 $ (p or p) eq.triple p$
 
+== Modus{ponens, tollens}
+
+#definition(title:"modus ponen")[Soit $P$ et $Q$ deux propositions, si $P$ est vrai et $P => Q$ est vrai, alors  Q est vrai.
+$ P, P => Q tack.l Q $]
+
+car $P => q eq.triple not Q => not P$
+
+#definition(title:"modus ponen")[Soit $P$ et $Q$ deux propositions, si $not Q$ est vrai et $P => Q$ est vrai, alors la proposition $not P$ est vrai.
+$ not Q, P => Q tack.l not P $
+]
+
+
+
 = TPs
 
 == Question 1: Ecrire une fonction #py("interpretations(nbVar)") qui renvoie le tuple constitue de toutes les interpretations possible de nbvar variables propositionnelles
@@ -95,8 +108,7 @@ def inter(nbvar):
         result = translatetotuple(result)
         finalresult += result,
     return finalresult
-"
-)
+")
 
 == Question 2.
 Une formule propositionelle FP de n variables est codee par une chiande de caracteres respectant la syntaxe python. 
@@ -104,3 +116,11 @@ les variables étant toujours codées V[0], V[1],… ,V[n-1]. Écrivez une fonct
 
 Exemple. Avec la chaîne de caractère FP = "V[0] and V[1]", l'appel de la fonction TV(FP,2) doit renvoyer le tuple
 #py("((False,False,False),(False,True,False),(True,False,False),(True,True,True))")
+
+le code est incomplet, mais le concept est juste. on genere les combinaison, puis on laisse exec evaluer l'expression, enfin on append dans la variable resultat final et on renvoie (le code n'est pas au point mais le concept est celui la)
+#py("
+def TV(fp, nbvar):
+   variables = inter(nbvar)
+   endresult = ()
+   for V in variables:
+       endresult += (i, (exec(fp)),)")
