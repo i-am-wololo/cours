@@ -54,7 +54,28 @@ exemples:
 
 = Bases d'algo
 
+= parcours de tableau
+
 = Algos de tri
+
+3 types d'algos de tri:
+- tri par selection
+- tri par propagation
+- tri par insertion
+
+tout les algorithmes reposent sur une méthode d'echange d'items basé sur leurs indice:
+```python
+def swap(T, i, j):
+   a = T[i]
+   T[i] = T[j]
+   T[j] = a
+```
+
+== tri par selection
+
+== tri par propagation (Bubble sort)
+
+== tri par insertion
 
 = Algos de recherche
 

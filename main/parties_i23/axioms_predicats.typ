@@ -1,5 +1,5 @@
 #import "../templates.typ": *
-
+#title("axiomes et predicats")
 = Ensembles
 #definition(title:"ensemble")[
   Un ensemble est une collection X d'objets _definis_ et _unique_. un objet appartenant a l'ensemble est dit membre de _X_ et on dit que l'objet et membre.
@@ -8,6 +8,8 @@
 exemple:
 $ {a, b, c, a} = {a, b, c} $
 sur python, un type ensemble existe qui est appele ```python set```
+
+#definition(title:"Difference")[Soit $X$ et $Y$ deux enembles. la difference entre les ensembles $X$ et $Y$ est l'ensemble ${x in X | x in.not Y}$, qui est l'ensembles qui contients les elements de X mais pas les elements de Y. on note aussi $X\Y$ l'ensemble qui contient seulement les differences d'un ensemble $X sect Y$ est $X Delta Y$]
 
 = Predicats
 #definition(title:"Predicat")[enonce contenant des variables tel qu'en substituant chaque variables par une valeure choisi, on obtient une proposition]
