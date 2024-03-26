@@ -10,6 +10,7 @@ $ {a, b, c, a} = {a, b, c} $
 sur python, un type ensemble existe qui est appele ```python set```
 
 #definition(title:"Difference")[Soit $X$ et $Y$ deux enembles. la difference entre les ensembles $X$ et $Y$ est l'ensemble ${x in X | x in.not Y}$, qui est l'ensembles qui contients les elements de X mais pas les elements de Y. on note aussi $X\Y$ l'ensemble qui contient seulement les differences d'un ensemble $X sect Y$ est $X Delta Y$]
+#definition(title:"Cardinal")[On appelle le cardinal d'un ensemble sa taille. Lorsqu'un ensemble est fini, le cardinal est la longueur de cette ensemble]
 
 = Predicats
 #definition(title:"Predicat")[enonce contenant des variables tel qu'en substituant chaque variables par une valeure choisi, on obtient une proposition]

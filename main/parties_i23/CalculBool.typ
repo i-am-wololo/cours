@@ -69,6 +69,11 @@ $0$, $1$, $0$,
 $1$, $0$, $0$
  )
 
+= Definitions:
+#definition(title:"antilogie")[L'antilogie est le cas ou une formule repond toujours faux, a l'inverse de la tautologie qui répond toujours vrai]
+= Code Gray
+#definition(title:"Code Gray")[]
 
-
+= Minterme, maxterme
+#definition(title:"Minterme, Maxterme")[on appelle Minterme toute fonction d'ordre n, prenant une seule fois la valeur 1]
 

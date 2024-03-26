@@ -1,6 +1,5 @@
 #let project(title: "", body) = {
   set document(date: datetime.today(), author: "Mehdi Ben Ahmed")  
-  set page(numbering: "1/1")
   set list(indent:3pt)
   set text(font: "RobotoMono Nerd Font")
 
@@ -10,8 +9,6 @@
   pagebreak()
 
   outline(depth: 3, indent: true)
-  pagebreak()
-
   body
 }
 
