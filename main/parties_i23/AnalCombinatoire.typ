@@ -18,10 +18,26 @@ Soit $n in NN$ la demi droite $|]n, arrow.r[|$ n'est pas vide, sinon $n$ serait 
 == recurrence
 #definition(title:"Theoreme principe de recurrence")[Toute partie de $NN$ qui contient 0 et stable pour l'application successeur est egale a $NN$]
 
-#definition(title:"theoreme recurrence simple")[]
+#definition(title:"theoreme recurrence simple")[Soit $P(n)$ un predicat sur $NN$ et $a in NN$. Si les deux propositions sont satisfaites:
+- $P(a)$ init
+- $ forall n in NN P(n) => P(n+1)$ heredite
+alors $forall n in [|a, ->[| P(n)$
+]
 
-#definition(title:"theoreme recurrence forte")[]
+#definition(title:"theoreme recurrence forte")[Soit $P(n)$ un predicat sur $NN$ et $a in NN$. Si les deux propositions sont satisfaites:
+- $P(a)$ init
+- $forall n in NN (forall k in [|a,n|] P(k)) => P(n+1)$ heredite forte
+alors $forall n in [|a, ->[| P(n)$
+]
 
-#definition(title:"theoreme recurrence multiple")[]
+#definition(title:"theoreme recurrence multiple")[Soit $P(n)$ un predicat sur $NN$ et $a in NN$. Si les deux propositions sont satisfaites:
+- $forall i in [|0, k-1|] P(a+i)$ init
+- $forall n in NN P(n) => P(n+k)$
+alors $forall n in [|a, ->[| P(n)$
+]
 
-#definition(title:"theoreme recurrence finie")[]
+#definition(title:"theoreme recurrence finie")[Soit $P(n)$ un predicat sur $NN$ et $a in NN$. Si les deux propositions sont satisfaites:
+- $P(a)$ init
+- $forall n in [|a, m-1|] P(n) => P(n+1)$
+alors $forall n in [|a, m|] P(n)$
+]
