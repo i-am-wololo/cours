@@ -22,16 +22,15 @@ $
 il consiste a parcourir une liste, et echanger le plus petit element par le premier,
 puis d'avencer l'indice du premier jusqu'a finir de parcourir la liste
 ```
-  procédure tri_selection(tableau t)
-      n ← longueur(t) 
-      pour i de 0 à n - 2
-          min ← i       
-          pour j de i + 1 à n - 1
-              si t[j] < t[min], alors min ← j
-          fin pour
-          si min ≠ i, alors échanger t[i] et t[min]
-      fin pour
-  fin procédure
+i ← 1
+while i < length(A)
+    j ← i
+    while j > 0 and A[j-1] > A[j]
+        swap A[j], A[j-1]
+        j ← j - 1
+    end while
+    i ← i + 1
+end while
 ```
 == tri par propagation (Bubble sort)
 il a une complexite de $n^2$, sauf pour le meilleur cas, ou $Omega(n) = n$

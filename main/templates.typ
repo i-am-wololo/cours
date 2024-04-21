@@ -1,7 +1,7 @@
 #let project(title: "", body) = {
   set document(date: datetime.today(), author: "Mehdi Ben Ahmed")  
   set list(indent:3pt)
-  set text(font: "RobotoMono Nerd Font")
+  set text(font: "FiraCode Nerd Font Mono")
 
   text(title,size: 3em)
   text("\nMehdi Ben Ahmed, écrit le ")
@@ -39,7 +39,7 @@
 ]
 
 #let chshtemplate(matiere: "", body) = {
-  set text(font: "Hack Nerd Font",
+  set text(font: "FiraCode Nerd Font Mono Ret",
            size: 8pt
           )
   title("fiche de "+matiere+" de Mehdi Ben Ahmed")
