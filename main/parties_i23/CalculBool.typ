@@ -1,8 +1,8 @@
 #import "../templates.typ": *
 
-#title("logique de boole")
+= Caclul Booleen
 
-= Algebre de boole
+== Algebre de boole
 soit $BB$ un enssemble munit d'une structure algebrique, on l'appelle algebre de boole.
 #definition(title:"")[on appelle booleen toute variable defini sur un ensemble a deux elements]
 
@@ -15,7 +15,7 @@ Pour simplifier l'ecriture des expressions logique, l'operande $not$ peut etre e
 
 dans le cadre de l'algebre de Boole, un litterale designe la aussi une variable $x$ (litteral positif) ou sa negation $macron(x)$ (litteral negatif)
 
-== Proprietes de calcul
+=== Proprietes de calcul
 
 on dispose des nombreuses  proprietess suivantes heritees du calcul propositionnel:
 
@@ -41,7 +41,7 @@ $ a => b = tilde(a) +b, \
  a arrow.t b = tilde(a b) \
  a arrow.b b = tilde(a + b) \
  $
- 
+
  qui ont les tables de verite:
  #table( columns: ( auto, auto, auto),
  $=>$, $0$, $1$,
@@ -69,11 +69,11 @@ $0$, $1$, $0$,
 $1$, $0$, $0$
  )
 
-= Definitions:
+== Definitions:
 #definition(title:"antilogie")[L'antilogie est le cas ou une formule repond toujours faux, a l'inverse de la tautologie qui répond toujours vrai]
-= Code Gray
+== Code Gray
 #definition(title:"Code Gray")[]
 
-= Minterme, maxterme
+== Minterme, maxterme
 #definition(title:"Minterme, Maxterme")[on appelle Minterme toute fonction d'ordre n, prenant une seule fois la valeur 1]
 
