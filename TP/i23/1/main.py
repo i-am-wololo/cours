@@ -1,17 +1,21 @@
 def aux(liste):
     la = []
     for i in liste:
+        print(liste)
         la.append(i+(False,))
         la.append(i+(True,))
     return la
 
 
+
 def interpretation(n: int):
-    result = [(False,), (True,)]
-    for i in range(n-1):
+    result = [()]
+    for i in range(n):
         result = aux(result)
+        print(result)
     return result
 
+print(interpretation(2))
 
 def TV(FP: str, n: int):
     table = interpretation(n)

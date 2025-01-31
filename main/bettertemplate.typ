@@ -5,7 +5,7 @@
 		#set align(center)
 		#smallcaps(title)
 		#smallcaps(text(datetime.today().display()))
-		#line(length:80%)
+		#line(length:80%, stroke: (dash: "dashed"))
 		]
 	)
 	set heading(numbering:"I.1")
@@ -13,3 +13,12 @@
 	body
 
 }
+
+#let defcount = counter("definition")
+#let definition(txt, title: "") = block[ 
+  #set rect(radius:2pt)
+  #rect[#defcount.step()
+	
+    *Définition #context defcount.display(): #title* #txt
+  ]
+]

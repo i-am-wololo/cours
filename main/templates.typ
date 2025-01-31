@@ -34,7 +34,7 @@
 #let definition(txt, title: "") = block[ 
   #set rect(radius:8pt)
   #rect[#defcount.step()
-    *Définition #defcount.display(): #title* #txt
+    *Définition #context defcount.display(): #title* #txt
   ]
 ]
 
